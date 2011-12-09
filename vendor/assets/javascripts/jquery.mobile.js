@@ -3982,12 +3982,12 @@ $.fn.grid = function( options ) {
 				grid: null
 			},options),
 			$kids = $this.children(),
-			gridCols = {solo:1, a:2, b:3, c:4, d:5},
+			gridCols = {solo:1, a:2, b:3, c:4, d:5, e:6, f:7, g:8, h:9},
 			grid = o.grid,
 			iterator;
 
 			if ( !grid ) {
-				if ( $kids.length <= 5 ) {
+				if ( $kids.length <= 9 ) {
 					for ( var letter in gridCols ) {
 						if ( gridCols[ letter ] === $kids.length ) {
 							grid = letter;
@@ -4014,6 +4014,18 @@ $.fn.grid = function( options ) {
 		}
 		if ( iterator > 4 ) {
 			$kids.filter( ":nth-child(5n+5)" ).addClass( "ui-block-e" );
+		}
+		if ( iterator > 5 ) {
+			$kids.filter( ":nth-child(6n+6)" ).addClass( "ui-block-f" );
+		}
+		if ( iterator > 6 ) {
+			$kids.filter( ":nth-child(7n+7)" ).addClass( "ui-block-g" );
+		}
+		if ( iterator > 7 ) {
+			$kids.filter( ":nth-child(8n+8)" ).addClass( "ui-block-h" );
+		}
+		if ( iterator > 8 ) {
+			$kids.filter( ":nth-child(9n+9)" ).addClass( "ui-block-i" );
 		}
 	});
 };
